@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <title>蘑菇街</title>
+    <!-- 引入重置样式 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- 引入swiper的css -->
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
+    <!-- 引入本页面样式 -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- 蘑菇街 开始 -->
+    <section class="contain-all">
+        <!-- 加载页面 开始 -->
+        <section class="loading-box">
+            <section class="loading">
+                <div class="person"></div>
+                <div class="load">
+                    <img src="img/lod4.png" alt="">
+                    <div class="progress"></div>
+                </div>
+                <div class="load-txt">
+                    <img src="img/lod5.png" alt="">
+                </div>
+            </section>
+        </section>
+        <!-- 加载页面 结束 -->
+
+        <!-- bgm 开始 -->
+        <section class="bgm hide">
+            <img src="img/music_1.png" alt="">
+            <audio src="media/bgm.mp3" loop="loop" preload="auto"></audio>
+        </section>
+        <!-- bgm 结束 -->
+
+        <!-- ===主页 开始=== -->
+        <div class="swiper-container the-index">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <!-- home 开始 -->
+                    <section class="home" id="wrapper">
+                        <div class="logo">
+                            <img src="img/logo.png" alt="">
+                        </div>
+                        <div class="home-txt1">
+                            <img src="img/index_t1.png" alt="">
+                        </div>
+                        <div class="character">
+                            <img src="img/cir.png" class="cir">
+                            <div class="some-pic">
+                                <div class="personal">
+                                    <img src="img/hand1.png" class="hand1">
+                                    <img src="img/index_people.png" class="index-people">
+                                    <img src="img/hand2.png" class="hand2">
+                                    <img src="img/hand3.png" class="hand3">
+                                </div>
+                                <div class="cloud">
+                                    <img src="img/cloud1.png" class="cloud1">
+                                    <img src="img/cloud2.png" class="cloud2">
+                                    <img src="img/cloud3.png" class="cloud3">
+                                    <img src="img/cloud4.png" class="cloud4">
+                                </div>
+                                <div class="goods">
+                                    <img src="img/p1_6.png" class="p1-6">
+                                    <img src="img/p1_1.png" class="p1-1">
+                                    <img src="img/hand4.png" class="hand4">
+                                    <img src="img/p1_5.png" class="p1-5">
+                                    <img src="img/p1_8.png" class="p1-8">
+                                    <img src="img/p1_4.png" class="p1-4">
+                                    <img src="img/p1_3.png" class="p1-3">
+                                    <img src="img/p1_2.png" class="p1-2">
+                                    <img src="img/p1_7.png" class="p1-7">
+                                </div>
+                            </div>
+                            <div class="next-topic">
+                                <img src="img/arrow.png" class="arrow">
+                                <img src="img/tip.png" class="tip">
+                            </div>
+                        </div>
+                    </section>
+                    <!-- home 结束 -->
+
+                    <!-- 对的声音 -->
+                    <audio src="media/yes.mp3" preload="auto" class="voice-yes"></audio>
+                    <!-- 错的声音 -->
+                    <audio src="media/no.mp3" preload="auto" class="voice-no"></audio>
+                    <!-- topic-one 开始 -->
+                    <section class="topic one">
+                        <div class="ans-t1"><img src="img/ans_t1.png" alt=""></div>
+                        <ul>
+                            <li>
+                                <img src="img/p1.png">
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                            <li>
+                                <img src="img/p2.png">
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                            <li>
+                                <img src="img/p3.png">
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                            <li>
+                                <img src="img/p4.png">
+                                <div class="right"><img src="img/ic2.png" alt=""></div>
+                                <div class="change-pic rightMove"></div>
+                            </li>
+                        </ul>
+                    </section>
+                    <!-- topic-one 结束 -->
+
+                    <!-- topic-two 开始 -->
+                    <section class="topic topic2 two">
+                        <div class="ans-t2"><img src="img/ans_t2.png" alt=""></div>
+                        <ul>
+                            <li class="two">
+                                <img src="img/p5.png">
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                            <li class="two">
+                                <img src="img/p6.png" >
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                            <li class="two">
+                                <img src="img/p7.png">
+                                <div class="right"><img src="img/ic2.png" alt=""></div>
+                                <div class="change-pic change-pic2 rightMove"></div>
+                            </li>
+                            <li class="two">
+                                <img src="img/p8.png">
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                        </ul>
+                    </section>
+                    <!-- topic-two 结束 -->
+
+                    <!-- topic-three 开始 -->
+                    <section class="topic topic2 three">
+                        <div class="ans-t3"><img src="img/ans_t3.png" alt=""></div>
+                        <ul>
+                            <li>
+                                <img src="img/p9.png">
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                            <li>
+                                <img src="img/p10.png" >
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                            <li>
+                                <img src="img/p11.png">
+                                <div class="right"><img src="img/ic2.png" alt=""></div>
+                                <div class="change-pic change-pic3 rightMove"></div>
+                            </li>
+                            <li>
+                                <img src="img/p12.png">
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                        </ul>
+                    </section>
+                    <!-- topic-three 结束 -->
+
+                    <!-- topic-four 开始 -->
+                    <section class="topic topic2 four">
+                        <div class="ans-t4"><img src="img/ans_t4.png" alt=""></div>
+                        <ul>
+                            <li>
+                                <img src="img/p13.png">
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                            <li>
+                                <img src="img/p14.png" >
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                            <li>
+                                <img src="img/p15.png">
+                                <div class="right"><img src="img/ic2.png" alt=""></div>
+                                <div class="change-pic change-pic4 rightMove"></div>
+                            </li>
+                            <li>
+                                <img src="img/p16.png">
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                        </ul>
+                    </section>
+                    <!-- topic-four 结束 -->
+
+                    <!-- topic-five 开始 -->
+                    <section class="topic topic2 five">
+                        <div class="ans-t4">
+                            <img src="img/ans_t5.png" alt="">
+                            <div class="play">
+                                <img src="img/tit5_btn2.png" alt="">
+                                <audio src="media/music.mp3" preload="auto"></audio>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>
+                                <img src="img/p17.png">
+                                <div class="right"><img src="img/ic2.png" alt=""></div>
+                                <div class="change-pic change-pic5-1 rightMove"></div>
+                            </li>
+                            <li>
+                                <img src="img/p18.png" >
+                                <div class="right"><img src="img/ic2.png" alt=""></div>
+                                <div class="five-change change-pic5-2 rightMove"></div>
+                            </li>
+                            <li>
+                                <img src="img/p19.png">
+                                <div class="right"><img src="img/ic2.png" alt=""></div>
+                                <div class="five-change change-pic5-3 rightMove"></div>
+                            </li>
+                            <li>
+                                <img src="img/p20.png">
+                                <div class="right"><img src="img/ic2.png" alt=""></div>
+                                <div class="five-change change-pic5-4 rightMove"></div>
+                            </li>
+                        </ul>
+                    </section>
+                    <!-- topic-five 结束 -->
+
+                    <!-- topic-six 开始 -->
+                    <section class="topic six">
+                        <div class="ans-t6"><img src="img/ans_t6.png" alt=""></div>
+                        <ul>
+                            <li>
+                                <img src="img/p21.png">
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                            <li>
+                                <img src="img/p22.png">
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                            <li>
+                                <img src="img/p23.png">
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                            <li>
+                                <img src="img/p24.png">
+                                <div class="right"><img src="img/ic2.png" alt=""></div>
+                                <div class="change-pic change-pic6 rightMove"></div>
+                            </li>
+                        </ul>
+                    </section>
+                    <!-- topic-six 结束 -->
+
+                    <!-- topic-seven 开始 -->
+                    <section class="topic topic2 seven">
+                        <div class="ans-t7"><img src="img/ans_t7.png" alt=""></div>
+                        <ul>
+                            <li>
+                                <img src="img/p25.png">
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                            <li>
+                                <img src="img/p26.png">
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                            <li>
+                                <img src="img/p27.png">
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                            <li>
+                                <img src="img/p28.png">
+                                <div class="right"><img src="img/ic2.png" alt=""></div>
+                                <div class="change-pic change-pic7 rightMove2"></div>
+                            </li>
+                            <li>
+                                <img src="img/p29.png">
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                            <li>
+                                <img src="img/p30.png">
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                            <li>
+                                <img src="img/p31.png">
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                            <li>
+                                <img src="img/p32.png">
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                            <li>
+                                <img src="img/p33.png">
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                        </ul>
+                    </section>
+                    <!-- topic-seven 结束 -->
+
+                    <!-- topic-eight 开始 -->
+                    <section class="topic topic2 eight">
+                        <div class="ans-t8"><img src="img/ans_t8.png" alt=""></div>
+                        <ul>
+                            <li>
+                                <img src="img/p34.png">
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                            <li>
+                                <img src="img/p35.png">
+                                <div class="right"><img src="img/ic2.png" alt=""></div>
+                                <div class="change-pic change-pic8 rightMove"></div>
+                            </li>
+                            <li>
+                                <img src="img/p36.png">
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                            <li>
+                                <img src="img/p37.png">
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                        </ul>
+                    </section>
+                    <!-- topic-eight 结束 -->
+
+                    <!-- topic-nine 开始 -->
+                    <section class="topic topic2 nine">
+                        <div class="ans-t9"><img src="img/ans_t9.png" alt=""></div>
+                        <ul>
+                            <li>
+                                <img src="img/p38.png">
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                            <li>
+                                <img src="img/p39.png">
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                            <li>
+                                <img src="img/p40.png">
+                                <div class="wrong"><img src="img/ic1.png" alt=""></div>
+                            </li>
+                            <li>
+                                <img src="img/p41.png">
+                                <div class="right"><img src="img/ic2.png" alt=""></div>
+                                <div class="change-pic change-pic9 rightMove"></div>
+                            </li>
+                        </ul>
+                    </section>
+                    <!-- topic-nine 结束 -->
+
+                    <!-- 提交 开始 -->
+                    <section class="the-btn"><img src="img/ans_btn.png" alt=""></section>
+                    <!-- 提交 结束 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 提交错误提示 开始 -->
+        <section class="topic-warning hide">您有问题尚未作答</section>
+        <!-- 提交错误提示 结束 -->
+
+        <!-- 答案弹窗 开始 -->
+        <div class="right-mask hide">
+            <!-- 1 -->
+            <div class="the-box answer1">
+                <img src="img/pop1.png" alt="">
+                <div class="close"><img src="img/close.png" alt=""></div>
+            </div>
+            <!-- 2 -->
+            <div class="the-box answer2">
+                <img src="img/pop2.png" alt="">
+                <div class="close"><img src="img/close.png" alt=""></div>
+            </div>
+            <!-- 3 -->
+            <div class="the-box answer3">
+                <img src="img/pop3.png" alt="">
+                <div class="close"><img src="img/close.png" alt=""></div>
+            </div>
+            <!-- 4 -->
+            <div class="the-box answer4">
+                <img src="img/pop4.png" alt="">
+                <div class="close"><img src="img/close.png" alt=""></div>
+            </div>
+            <!-- 5 -->
+            <div class="the-box answer5">
+                <img src="img/pop5.png" alt="">
+                <div class="close"><img src="img/close.png" alt=""></div>
+            </div>
+            <!-- 6 -->
+            <div class="the-box answer6">
+                <img src="img/pop6.png" alt="">
+                <div class="close"><img src="img/close.png" alt=""></div>
+            </div>
+            <!-- 7 -->
+            <div class="the-box answer7">
+                <img src="img/pop7.png" alt="">
+                <div class="close"><img src="img/close.png" alt=""></div>
+            </div>
+            <!-- 8 -->
+            <div class="the-box answer8">
+                <img src="img/pop8.png" alt="">
+                <div class="close"><img src="img/close.png" alt=""></div>
+            </div>
+            <!-- 9 -->
+            <div class="the-box answer9">
+                <img src="img/pop9.png" alt="">
+                <div class="close"><img src="img/close.png" alt=""></div>
+            </div>
+        </div>
+        <!-- 答案弹窗 结束 -->
+        <!-- ===主页 结束=== -->
+
+        <!-- 选择主播风格 开始 -->
+        <section class="choose-style hide">
+            <img src="img/p2_1.png" class="p2-cloud">
+            <div class="want">
+                <img src="img/p2_tit.png" alt="">
+            </div>
+            <ul>
+                <li>
+                    <img src="img/p2_3.png" class="human">
+                    <img src="img/p2_2.png" class="deep">
+                </li>
+                <li>
+                    <img src="img/p2_4.png" class="human">
+                    <img src="img/p2_2.png" class="deep">
+                </li>
+                <li>
+                    <img src="img/p2_5.png" class="human">
+                    <img src="img/p2_2.png" class="deep">
+                </li>
+                <li>
+                    <img src="img/p2_6.png" class="human">
+                    <img src="img/p2_2.png" class="deep">
+                </li>
+                <li>
+                    <img src="img/p2_7.png" class="human">
+                    <img src="img/p2_2.png" class="deep">
+                </li>
+                <li>
+                    <img src="img/p2_8.png" class="human">
+                    <img src="img/p2_2.png" class="deep">
+                </li>
+            </ul>
+            <!-- 输入名称弹出层 -->
+            <div class="uname-box hide">
+                <div class="uname">
+                    <img src="img/p2_11.png" alt="">
+                    <input type="text" class="uinput">
+                    <div class="turn-back"><img src="img/p2_9.png" alt=""></div>
+                    <div class="confirm"><img src="img/p2_10.png" alt=""></div>
+                    <div class="warning hide">不能为空滴</div>
+                </div>
+            </div>
+        </section>
+        <!-- 选择主播风格 结束 -->
+
+        <!-- 选择的人物分享图 -->
+        <div class="share-pic hide">
+            <div class="operate">
+                <div class="afresh-choose"><img src="img/btn1.png" alt=""></div>
+                <div class="test-again"><img src="img/btn2.png" alt=""></div>
+            </div>
+            <div class="cloud">
+                <img src="img/cloud1.png" class="cloud1">
+                <img src="img/cloud2.png" class="cloud2">
+                <img src="img/cloud3.png" class="cloud3">
+                <img src="img/cloud4.png" class="cloud4">
+            </div>
+            <div class="poster">
+                <img src="img/mb1.png" class="poster-bg">
+                <span class="the-name">123</span> 
+                <img src="img/p2_3.png" class="anchor">
+            </div>
+            <div class="deep-choose">
+                <div class="download"><img src="img/btn3.png" alt=""></div>
+                <div class="buy"><img src="img/btn4.png" alt=""></div>
+            </div>
+        </div>
+
+        <!-- 分享弹窗 -->
+        <div class="share-icon hide">
+            <div class="share"><img src="img/btn6.png" alt=""></div>
+        </div>
+    </section>
+    <!-- 蘑菇街 结束 -->
+
+    <!-- 引入swiperjs -->
+    <script src="swiper/swiper-bundle.min.js"></script>
+    <!-- 引入jQuery -->
+    <script src="js/jquery-1.11.1.js"></script>
+    <!-- 引入jroll -->
+    <script src="js/jroll.min.js"></script>
+    <!-- 引入本页面js -->
+    <script src="js/index.js"></script>
+</body>
+
+</html>

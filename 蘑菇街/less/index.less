@@ -1,0 +1,957 @@
+@screenWidth:750;
+// 定义vw
+@vw:(@screenWidth / 100vw);
+
+// 设置高宽
+.setwh(@w:750,@h:1480) {
+    width: (@w / @vw);
+    height: (@h / @vw);
+}
+
+// 设置定位
+.lt(@l: 0, @t: 0) {
+    position: absolute;
+    left: (@l/@vw);
+    top: (@t/@vw);
+}
+//右上
+.rt(@r: 0, @t: 0) {
+    position: absolute;
+    right: (@r/@vw);
+    top: (@t/@vw);
+}
+//less 定位函数 左下
+.lb(@l: 0, @b: 0) {
+    position: absolute;
+    left: (@l/@vw);
+    bottom: (@b/@vw);
+}
+//右下
+.rb(@r: 0, @b: 0) {
+    position: absolute;
+    right: (@r/@vw);
+    bottom: (@b/@vw);
+}
+//水平居中
+.cl(@w) {
+    position: absolute;
+    left: 50%;
+    margin-left: -(@w/2/@vw);
+}
+//垂直居中
+.ct(@h) {
+    position: absolute;
+    top: 50%;
+    margin-top: -(@h/2/@vw);
+}
+
+// 默认隐藏
+.hide {
+    display: none;
+}
+
+body,
+html {
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    background: url("../img/bg.jpg") repeat pink;
+    background-size: 100%;
+}
+
+// ===蘑菇街 开始===
+.contain-all {
+    width: 100%;
+    height: 100%;
+}
+// 加载页面 开始
+@keyframes person {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -468./@vw 0;
+    }
+}
+.loading-box {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background: url("../img/bg.jpg") repeat;
+    background-size: 100%;
+    .loading {
+        .ct(440);       
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .person {
+            .setwh(243,434);
+            background: url("../img/lod_ren.png") no-repeat;
+            background-size: 468./@vw 434./@vw;
+            animation: person 1.2s steps(2) infinite;
+        }
+        .load {
+            position: relative;
+            .setwh(617,48);
+            margin: 30./@vw 0 22./@vw;
+            @keyframes progress {
+                0% {
+                    width: 5%;
+                }
+                100% {
+                    width: 100%;
+                }
+            }
+            .progress {
+                .lt(11,8);
+                height: 26./@vw;
+                background: url("../img/lod3.png") no-repeat;
+                background-size: 595./@vw 26./@vw;
+                z-index: 1;
+                animation: progress 3s linear forwards;
+            }
+        }
+        .load-txt {
+            .setwh(166,38);
+        }
+    }
+}
+// 加载页面 结束
+
+// bgm 开始
+.bgm {
+    position: fixed;
+    left: 50./@vw;
+    top: 50./@vw;
+    .setwh(78,78);
+    z-index: 999;
+}
+// bgm 结束
+
+// ===主页 开始===
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.the-index {
+    opacity: 0;
+    transition: all 1s;
+}
+// home 开始
+@keyframes handUp {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-28deg);
+    }
+    50%, 75%, 100% {
+        transform: rotate(0deg);
+    }
+} 
+@keyframes cloudMove {
+    0% {
+        left: -50%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+@keyframes goods {
+    0% {
+        -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg);
+    }
+    20% {
+        -webkit-transform: rotate3d(0, 0, 1, 8deg);
+        transform: rotate3d(0, 0, 1, 8deg);
+    }
+    40% {
+        -webkit-transform: rotate3d(0, 0, 1, -3deg);
+        transform: rotate3d(0, 0, 1, -3deg);
+    }
+    60% {
+        -webkit-transform: rotate3d(0, 0, 1, 2deg);
+        transform: rotate3d(0, 0, 1, 2deg);
+    }
+    80% {
+        -webkit-transform: rotate3d(0, 0, 1, -2deg);
+        transform: rotate3d(0, 0, 1, -2deg);
+    }
+    100% {
+        -webkit-transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+}
+@keyframes sack {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-5deg);
+    }
+    50%,
+    75%,
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes nextTopic {
+    0% {
+        transform: translate3d(0,100%,0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+    }
+}
+@keyframes arrow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.home {
+    position: relative;
+    height: 1403./@vw;
+    .logo {
+        .rt(38,145);
+        .setwh(198,55);
+    }
+    .home-txt1 {
+        .lt(50,220);
+        .setwh(526,270);
+    }
+    .character {
+        .cir {
+            .cl(750);
+            top: 496./@vw;
+            .setwh(750,751);
+        }
+        .some-pic {
+            .lt(0,477);
+            width: 100%;
+            .personal {                          
+                .hand1 {
+                    .lt(62,82);
+                    .setwh(331,113);
+                    z-index: 1;
+                }
+                .index-people {
+                    .lt(27,82);
+                    .setwh(615,785);
+                    z-index: 9;
+                }
+                .hand2 {
+                    .rt(190,10);
+                    .setwh(252,238);
+                    z-index: 1;
+                    animation: handUp 5s 2s linear forwards infinite;
+                }
+                .hand3 {
+                    .lt(166,193);
+                    .setwh(133,179);
+                    z-index: 10;
+                }
+            }
+            .cloud {
+                .cloud1 {
+                    .rt(189,18);
+                    .setwh(101,62);
+                    animation: cloudMove 5s linear infinite;
+                }
+                .cloud4 {
+                    .rt(77,152);
+                    .setwh(172,107);
+                    animation: cloudMove 8s linear infinite;
+                }
+                .cloud2 {
+                    .lt(0,275);
+                    .setwh(158,101);
+                    animation: cloudMove 6s linear infinite;
+                }
+                .cloud3 {
+                    .lt(137,522);
+                    .setwh(278,169);
+                    animation: cloudMove 10s linear infinite;
+                }
+            }
+            .goods {
+                .p1-6 {
+                    .rt(112,110);
+                    .setwh(63,76);
+                    z-index: 9;
+                    animation: goods 1s 1.6s linear infinite;
+                }
+                .p1-1 {
+                    .lt(65,216);
+                    .setwh(82,108);
+                    z-index: 9;
+                    animation: goods 1s 1.3s linear infinite;
+                }
+                .hand4 {
+                    .lt(63,301);               
+                    .setwh(271,315);
+                    z-index: 9;
+                    transform-origin: right top;
+                    animation: sack 3s both infinite;
+                }
+                .p1-5 {
+                    .rt(115,305);
+                    .setwh(109,67);
+                    z-index: 9;
+                    animation: goods 1s 1.9s linear infinite;
+                }
+                .p1-8 {
+                    .lt(112,613);
+                    .setwh(91,87);
+                    z-index: 9;
+                    animation: goods 1s 2.2s linear infinite;
+                }
+                .p1-4 {
+                    .lt(302,556);
+                    .setwh(82,89);
+                    z-index: 9;
+                    animation: goods 1s 2.8s linear infinite;
+                }
+                .p1-3 {
+                    .lt(287,628);
+                    .setwh(68,40);
+                    z-index: 9;
+                    animation: goods 1s 3.1s linear infinite;
+                }
+                .p1-2 {
+                    .rt(195,541);
+                    .setwh(91,142);
+                    z-index: 9;
+                    animation: goods 1s 2.5s linear infinite;
+                }
+                .p1-7 {
+                    .lt(281,720);
+                    .setwh(57,74);
+                    z-index: 9;
+                    animation: goods 1s 3.4s linear infinite;
+                }
+            }
+        }
+        .next-topic {
+            opacity: 0;
+            .lt(0,1315);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            .arrow {  
+                .setwh(64,45);
+                margin-bottom: 14./@vw;
+                animation: arrow .8s linear infinite alternate;
+            }
+            .tip {
+                .setwh(133,29);
+            }
+        }
+    }
+}
+// home 结束
+
+// topic-one 开始
+@keyframes shake {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    10%, 20% {
+        -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%, 50%, 70%, 90% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%, 60%, 80% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+.shake {
+    animation: shake 1.2s forwards;
+}
+@keyframes rightMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -648./@vw 0;
+    }
+}
+.rightMove {
+    animation: rightMove 1s 1.2s steps(2) infinite;
+}
+@keyframes rightMove2 {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -420./@vw 0;
+    }
+}
+.rightMove2 {
+    animation: rightMove2 1s 1.2s steps(2) infinite;
+}
+
+.topic {
+    .ans-t1 {
+        .setwh(664,133);
+        margin: 0 auto;
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 15./@vw 41./@vw 0 47./@vw;
+        box-sizing: border-box;
+        li {
+            position: relative;
+            .setwh(324,256);          
+            margin: 0 14./@vw 12./@vw 0;
+            &:nth-of-type(even) {
+                margin-right: 0;
+            }
+            .wrong {
+                .rt(-18,121);
+                .setwh(104,80);
+                z-index: 99;
+            }
+            .right {
+                .rt(-29,116);
+                .setwh(104,80);
+                z-index: 99;
+            }
+        }
+    }
+}
+.one {
+    margin-top: 57./@vw;
+}
+// topic-one 结束
+
+// topic-two/eight/nine 开始
+.topic2 {
+    margin-top: 21./@vw; 
+    ul {
+        li {
+            .setwh(324,283);
+            .right {
+                .rt(-14,116);
+            }
+        }
+    }  
+}
+.two,
+.eight,
+.nine {
+    .ans-t2,
+    .ans-t8,
+    .ans-t9 {
+        .setwh(664,188);
+        margin: 0 auto;
+    }
+}
+.eight,
+.nine {
+    ul {
+        li {
+            .right {
+                .rt(-29,116);
+            }
+        }
+    }
+}
+// topic-two/eight/nine 结束
+
+// topic-three/six 开始
+.three,
+.six {
+    margin-top: 21./@vw; 
+    .ans-t3,
+    .ans-t6 {
+        .setwh(664,188);
+        margin: 0 auto;
+    }
+    ul {
+        li {
+            .setwh(324,255);
+        }
+    }
+}
+// topic-three/six 结束
+
+// topic-four/five 开始
+.four,
+.five {
+    .ans-t4 {
+        .setwh(664,188);
+        margin: 0 auto;
+    }
+    ul {
+        li {
+            .setwh(324,283);
+        }
+    }
+}
+@keyframes play {
+    0% {
+        -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg);
+    }
+    20% {
+        -webkit-transform: rotate3d(0, 0, 1, 15deg);
+        transform: rotate3d(0, 0, 1, 15deg);
+    }
+    40% {
+        -webkit-transform: rotate3d(0, 0, 1, -10deg);
+        transform: rotate3d(0, 0, 1, -10deg);
+    }
+    60% {
+        -webkit-transform: rotate3d(0, 0, 1, 5deg);
+        transform: rotate3d(0, 0, 1, 5deg);
+    }
+    80% {
+        -webkit-transform: rotate3d(0, 0, 1, -5deg);
+        transform: rotate3d(0, 0, 1, -5deg);
+    }
+    100% {
+        -webkit-transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+}
+.five {
+    .ans-t4 {
+        position: relative;
+        .play {
+            .rb(53,36);
+            .setwh(72,72);
+            z-index: 9;
+            animation: play 1.2s linear infinite;
+        }
+    }
+    ul {
+        li {
+            .right {
+                // .rt(-32,116);
+                z-index: 999;
+            }
+        }
+    }
+}
+// topic-four/five 结束
+
+// topic-seven 开始
+.seven {
+    .ans-t7 {
+        .setwh(664,132);
+        margin: 0 auto;
+    }
+    ul {
+        li {
+            .setwh(210,255);
+            &:nth-of-type(even) {
+                margin-right: 12./@vw;
+            }
+            &:nth-of-type(3n) {
+                margin-right: 0;
+            }
+        }
+    }
+}
+// topic-seven 结束
+
+// 答对图片的改变 开始
+.topic {
+    li {
+        position: relative;
+        .change-pic {
+            .lt(0,0);
+            .setwh(324,255);
+            z-index: 9;
+            background: url("../img/yes1.png") no-repeat;
+            background-size: 648./@vw 255./@vw;
+        }
+        .change-pic2 {
+            background: url("../img/yes2.png") no-repeat;
+            background-size: 648./@vw 283./@vw;
+        }
+        .change-pic3 {
+            background: url("../img/yes3.png") no-repeat;
+            background-size: 648./@vw 255./@vw;
+        }
+        .change-pic4 {
+            background: url("../img/yes4.png") no-repeat;
+            background-size: 648./@vw 283./@vw;
+        }
+        .change-pic5-1 {
+            background: url("../img/yes5.png") no-repeat;
+            background-size: 648./@vw 283./@vw;
+        }
+        .change-pic5-2 {
+            .lt(0,0);
+            .setwh(324,255);
+            background: url("../img/yes6.png") no-repeat;
+            background-size: 648./@vw 283./@vw;
+        }
+        .change-pic5-3 {
+            .lt(0,0);
+            .setwh(324,255);
+            background: url("../img/yes7.png") no-repeat;
+            background-size: 648./@vw 283./@vw;
+        }
+        .change-pic5-4 {
+            .lt(0,0);
+            .setwh(324,255);
+            background: url("../img/yes8.png") no-repeat;
+            background-size: 648./@vw 283./@vw;
+        }
+        .change-pic6 {
+            background: url("../img/yes9.png") no-repeat;
+            background-size: 648./@vw 256./@vw;
+        }
+        .change-pic7 {
+            .setwh(210,255);
+            background: url("../img/yes10.png") no-repeat;
+            background-size: 420./@vw 255./@vw;
+        }
+        .change-pic8 {
+            background: url("../img/yes11.png") no-repeat;
+            background-size: 648./@vw 283./@vw;
+        }
+    }
+}
+// 答对图片的改变 结束
+
+// 提交 开始
+@keyframes theBtn {
+    0% {
+        transform: scale3d(1,1,1);
+    }
+    50% {
+        transform: scale3d(1.05,1.05,1);
+    }
+    100% {
+        transform: scale3d(1,1,1);
+    }
+}
+.the-btn {
+    .setwh(277,81);
+    margin: 38./@vw auto 117./@vw;
+    animation: theBtn 2.3s  infinite;
+}
+// 提交 结束
+
+// 提交错误提示 开始
+.topic-warning {
+    .cl(350);
+    bottom: 30./@vw;
+    .setwh(350,250);
+    line-height: 250./@vw;
+    border-radius: 20./@vw;
+    background-color: #eee;
+    font-size: 36./@vw;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    z-index: 999;
+}
+// 提交错误提示 结束
+
+// 答案弹窗 开始
+.right-mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(0,0,0,.5);     
+    .the-box {
+        .cl(464);
+        .ct(438);     
+        .setwh(464,438);
+        .close {
+            .lt(-23,-24);
+            .setwh(78,78);
+        }
+    }
+}
+// 答案弹窗 结束
+// ===主页 结束===
+
+// 选择主播风格 开始
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    60% {
+        opacity: 1;
+        transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    }
+}
+.choose-style {
+    .p2-cloud {
+        .lt(0,57);
+        .setwh(750,829);
+        animation: cloudMove 8s linear infinite;
+    }
+    .want {
+        .cl(507);
+        top: 148./@vw;
+        .setwh(507,65);
+        z-index: 1;
+    }
+    ul {
+        .lt(0,206);      
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        li {
+            position: relative;
+            display: flex;
+            height: 541./@vw;
+            margin-bottom: 29./@vw;
+            animation: fadeDown .4s both;
+            &:nth-of-type(2) {
+                animation-delay: .2s;
+            }
+            &:nth-of-type(3) {
+                animation-delay: .4s;
+            }
+            &:nth-of-type(4) {
+                animation-delay: .6s;
+            }
+            &:nth-of-type(5) {
+                animation-delay: .6s;
+            }
+            &:nth-of-type(6) {
+                animation-delay: .8s;
+            }
+            .human {
+                position: relative;
+                .setwh(244,506);
+                z-index: 1;
+            }
+            .deep {
+                .cl(168);
+                bottom: 0;
+                .setwh(168, 99);
+            }
+        }
+    }
+    .uname-box {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.5);
+        z-index: 99;
+        .uname {
+            .cl(481);
+            .ct(393);
+            .setwh(481,393);
+            .uinput {
+                .cl(317);
+                top: 143./@vw;
+                .setwh(317,60);
+                padding-left: 10./@vw;
+                box-sizing: border-box;
+            }
+            .turn-back {
+                .lt(26,19);
+                .setwh(43,40);
+            }
+            .confirm {
+                .cl(188);
+                bottom: 52./@vw;
+                .setwh(188,65);
+                animation: theBtn 2s infinite;
+            }
+            .warning {
+                .lt(0,0);
+                width: 100%;
+                height: 140./@vw;
+                line-height: 140./@vw;
+                border-radius: 20./@vw;
+                background-color: #eee;
+                text-align: center;
+                font-size: 32./@vw;
+                color: #333; 
+            }
+        }
+    }
+}
+// 选择主播风格 结束
+
+// 选择的人物分享图
+.share-pic {
+    .operate {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 65./@vw;
+        padding: 0 36./@vw 0 33./@vw;
+        .afresh-choose {
+            .setwh(155,58);
+            animation: theBtn 2s infinite;
+        }
+        .test-again {
+            .setwh(153,58);
+            animation: theBtn 2s infinite;
+        }
+    }
+    .cloud {
+        .cloud1 {
+            .rt(189,18);
+            .setwh(101,62);
+            animation: cloudMove 8s linear infinite;
+        }
+        .cloud4 {
+            .rt(77,152);
+            .setwh(172,107);
+            animation: cloudMove 11s linear infinite;
+            z-index: 9;
+        }
+        .cloud2 {
+            .lt(0,275);
+            .setwh(158,101);
+            animation: cloudMove 9s linear infinite;
+            z-index: 9;
+        }
+        .cloud3 {
+            .lt(137,522);
+            .setwh(278,169);
+            animation: cloudMove 13s linear infinite;
+        }
+    }
+    .poster {
+        position: relative;
+        .setwh(610,1082);
+        margin: 17./@vw auto 12./@vw;
+        .the-name {
+            .lt(104,122);
+            .setwh(249,71);
+            line-height: 71./@vw;
+            padding-left: 20./@vw;
+            font-size: 34./@vw;
+            font-weight: 700;
+            color: #333;
+            box-sizing: border-box;
+        }
+        .anchor {
+            .cl(264);
+            top: 320./@vw;
+            .setwh(264,506);
+        }
+    }
+    .deep-choose {
+        display: flex;
+        justify-content: center;
+        .download {
+            .setwh(94,133);
+            margin-right: 195./@vw;
+            animation: theBtn 2s infinite;
+        }
+        .buy {
+            .setwh(119,133);
+            animation: theBtn 2s infinite;
+        }
+    }
+}
+
+// 分享弹窗
+@keyframes figure {
+    0% {
+        transform: translate3d(0,0,0);
+    }
+    100% {
+        transform: translate3d(-100%,100%,0);
+    }
+}
+.share-icon {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    z-index: 999;
+    .share {
+        .rt(20,20);
+        .setwh(76,97);
+        animation: figure 1s infinite alternate;
+    }
+}
+// ===蘑菇街 结束===
+
+// 适配
+@media screen and (max-height: 705px) {
+    .home {
+        height: 1303./@vw;
+        .logo {
+            .rt(38,45);
+        }
+        .home-txt1 {
+            .lt(50,120);
+            transform: scale3d(.9,.9,.9);
+        }
+        .character {
+            .cir {
+                top: 396./@vw;
+            }
+            .some-pic {
+                .lt(0,377);
+            }
+            .next-topic {
+                opacity: 0;
+                .lt(0,1215);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                .arrow {  
+                    .setwh(64,45);
+                    margin-bottom: 14./@vw;
+                    animation: arrow .8s linear infinite alternate;
+                }
+                .tip {
+                    .setwh(133,29);
+                }
+            }
+        }
+    }
+    .share-pic {
+        .operate {
+            margin-top: 45./@vw;
+        }
+        .poster {
+            transform: scale3d(.9,.9,1);
+            margin: 7./@vw auto 0;
+        }
+    }
+    .choose-style {
+        .want {
+            top: 118./@vw;
+        }
+        ul {
+            .lt(0,176);
+        }
+    }
+}
